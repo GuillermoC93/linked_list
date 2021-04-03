@@ -8,14 +8,14 @@ class LinkedList
   end
 
   def append(value)
-    if @tail
-      current_node = @tail
-      @tail = Node.new(value)
-      current_node.next_node = @tail
+    if @head.nil?
+      prepend(value)
     else
-      @tail = Node.new(value)
+      temp = head
+      temp = temp.next_node until temp.next_node.nil?
+      temp.next_node = Node.new(value)
+      @size += 1
     end
-    @size += 1
   end
 
   def prepend(value)
