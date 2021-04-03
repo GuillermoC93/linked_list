@@ -27,6 +27,10 @@ class LinkedList
     end
     @size += 1
   end
+
+  def size
+    "Total size of this linked list is #{@size}."
+  end
 end
 
 # node class
