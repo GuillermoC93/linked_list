@@ -33,13 +33,25 @@ class LinkedList
   end
 
   def head
-    puts "The head node value is #{@head.value}."
+    if @head
+      puts "The head node value is #{@head.value}."
+    else
+      puts 'There is no head node.'
+    end
   end
 
   def tail
-    temp = @head
-    temp = temp.next_node until temp.next_node.nil?
-    puts "The tail node value is #{temp.value}."
+    if @head
+      temp = @head
+      temp = temp.next_node until temp.next_node.nil?
+      puts "The tail node value is #{temp.value}."
+    else
+      puts 'There is no tail node.'
+    end
+  end
+
+  def at(index)
+
   end
 end
 
