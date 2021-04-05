@@ -1,5 +1,5 @@
 class LinkedList
-  attr_accessor :head
+  attr_accessor :head, :size
 
   def initialize
     @head = nil
@@ -11,7 +11,7 @@ class LinkedList
     if @head.nil?
       prepend(value)
     else
-      temp = head
+      temp = @head
       temp = temp.next_node until temp.next_node.nil?
       temp.next_node = Node.new(value)
       @size += 1
@@ -29,7 +29,17 @@ class LinkedList
   end
 
   def size
-    "Total size of this linked list is #{@size}."
+    puts "Total size of this linked list is #{@size}."
+  end
+
+  def head
+    puts "The head node value is #{@head.value}."
+  end
+
+  def tail
+    temp = @head
+    temp = temp.next_node until temp.next_node.nil?
+    puts "The tail node value is #{temp.value}."
   end
 end
 
