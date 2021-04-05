@@ -49,10 +49,6 @@ class LinkedList
       puts 'There is no tail node.'
     end
   end
-
-  def at(index)
-
-  end
 end
 
 # node class
