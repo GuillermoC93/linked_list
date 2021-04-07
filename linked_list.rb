@@ -65,6 +65,21 @@ class LinkedList
     end
     @size -= 1
   end
+
+  def to_s
+    list_string = ''
+    if @head.nil?
+      puts 'There is no list.'
+    else
+      temp = @head
+      while temp.next_node
+        list_string += "( #{temp.value} )->"
+        temp = temp.next_node
+        list_string += "( #{temp.value} )-> nil" if temp.next_node.nil?
+      end
+    end
+    list_string
+  end
 end
 
 # node class
