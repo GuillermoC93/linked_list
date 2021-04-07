@@ -54,7 +54,7 @@ class LinkedList
 
   def pop
     if @head.next_node.nil?
-      @head.value = nil
+      @head = nil
     else
       temp = @head
       while temp.next_node.nil? == false
