@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
+# linked list class
 class LinkedList
   attr_accessor :head, :size
 
   def initialize
     @head = nil
-    @tail = nil
     @size = 0
   end
 
@@ -28,11 +30,11 @@ class LinkedList
     @size += 1
   end
 
-  def size
+  def list_size
     puts "Total size of this linked list is #{@size}."
   end
 
-  def head
+  def list_head
     if @head
       puts "The head node value is #{@head.value}."
     else
