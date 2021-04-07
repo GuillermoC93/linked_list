@@ -42,7 +42,7 @@ class LinkedList
     end
   end
 
-  def tail
+  def list_tail
     if @head
       temp = @head
       temp = temp.next_node until temp.next_node.nil?
@@ -50,6 +50,20 @@ class LinkedList
     else
       puts 'There is no tail node.'
     end
+  end
+
+  def pop
+    if @head.next_node.nil?
+      @head.value = nil
+    else
+      temp = @head
+      while temp.next_node.nil? == false
+        curr = temp
+        temp = curr.next_node
+        curr.next_node = nil if temp.next_node.nil?
+      end
+    end
+    @size -= 1
   end
 end
 
