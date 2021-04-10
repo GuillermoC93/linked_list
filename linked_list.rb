@@ -80,6 +80,16 @@ class LinkedList
     end
     list_string
   end
+
+  def contains?(value)
+    temp = @head
+    while temp.nil? == false
+      return true if temp.value == value
+
+      temp = temp.next_node
+    end
+    false
+  end
 end
 
 # node class
