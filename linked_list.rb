@@ -90,6 +90,17 @@ class LinkedList
     end
     false
   end
+
+  def at(index)
+    i = 0
+    temp = @head
+    while temp
+      return temp.value if i == index
+
+      temp = temp.next_node
+      i += 1
+    end
+  end
 end
 
 # node class
