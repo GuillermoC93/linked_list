@@ -101,6 +101,17 @@ class LinkedList
       i += 1
     end
   end
+
+  def find(value)
+    i = 0
+    temp = @head
+    while temp
+      return i if temp.value == value
+
+      temp = temp.next_node
+      i += 1
+    end
+  end
 end
 
 # node class
